@@ -17,7 +17,7 @@ library(lubridate)
 
 ### GBPBRL ###
 
-GBPBRL <- read_csv("D:/dataTCC/4-GBPBRL/GBPBRL.csv", col_names = FALSE)
+GBPBRL <- read_csv("GBPBRL.csv", col_names = FALSE)
 price <- GBPBRL$X3
 
 dt <- 10:20000
