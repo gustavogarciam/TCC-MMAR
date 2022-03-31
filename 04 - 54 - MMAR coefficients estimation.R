@@ -17,7 +17,7 @@ library(lubridate)
 
 ### USDDM ###
 
-USDDM <- read_csv("C:/Users/Murilo/Dropbox/TCC/códigos/função de partição Fisher 1997 USDDM e USDBRL/USDDM.csv")
+USDDM <- read_csv("USDDM.csv")
 
 # Appendix 9.3: 6119 observations for weekdays from 1973-06-04 to 1996-12-31
 # Except Christmas and New Year's Day
@@ -52,7 +52,7 @@ dt <- 1:180
 
 ### USDBRL diário ###
 
-USDBRL <- read_csv("C:/Users/Murilo/Dropbox/TCC/códigos/MMAR simulation/USDBRL.csv")
+USDBRL <- read_csv("USDBRL.csv")
 price <- USDBRL$USDBRL
 
 dt <- 1:180
@@ -64,7 +64,7 @@ dt <- 1:180
 
 ### USDBRL intraday ###
 
-USDBRL <- read_csv("D:/dataTCC/2-USDBRL/USDBRLt.csv", col_names = FALSE)
+USDBRL <- read_csv("USDBRLt.csv", col_names = FALSE)
 price <- USDBRL$X3
 
 dt <- 100:62000
@@ -73,14 +73,14 @@ dt <- 100:62000
 ### USDCHF diário ###
 
 library(readr)
-USDCHF <- read_csv("D:/dataTCC/USDCHF/FRB_H10.csv")
+USDCHF <- read_csv("FRB_H10.csv")
 price <- na.omit(USDCHF$USDCHF)
 
 dt <- 1:150
 
 ### USDCHF intraday ###
 
-setwd("D:/dataTCC/USDCHF")
+setwd("~/USDCHF")
 data.1 <- read.csv("DAT_MT_USDCHF_M1_2000.csv",  header = FALSE)
 data.a <- read.csv("DAT_MT_USDCHF_M1_2001.csv",  header = FALSE)
 data.1 <- rbind(data.1,data.a)
@@ -134,7 +134,7 @@ dt <- 100:180000
 
 ### EURBRL ###
 
-EURBRL <- read_csv("D:/dataTCC/3-EURBRL/EURBRL.csv", col_names = FALSE)
+EURBRL <- read_csv("EURBRL.csv", col_names = FALSE)
 price <- EURBRL$X3
 
 dt <- 10:20000
@@ -142,7 +142,7 @@ dt <- 10:20000
 
 ### GBPBRL ###
 
-GBPBRL <- read_csv("D:/dataTCC/4-GBPBRL/GBPBRL.csv", col_names = FALSE)
+GBPBRL <- read_csv("GBPBRL.csv", col_names = FALSE)
 price <- GBPBRL$X3
 
 dt <- 10:20000
