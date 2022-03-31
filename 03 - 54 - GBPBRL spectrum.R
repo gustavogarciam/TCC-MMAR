@@ -1,5 +1,3 @@
-setwd("D:/dataTCC/4-GBPBRL")
-
 library(ggplot2)
 library(reshape2)
 library(latex2exp)
