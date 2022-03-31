@@ -4,7 +4,6 @@ USDBRL <- readr::read_csv("USDBRL.csv")
 priceB <- USDBRL$USDBRL[1:(5698-1024)]
 priceF <- USDBRL$USDBRL[(5698-1023):5698]
 X <- log(priceB) - log(priceB[1]) # X(t) = ln(P(t)/P(0))
-dt <- 1:180
 
 H <- 1.808^-1
 alpha0 <- 0.6296443
