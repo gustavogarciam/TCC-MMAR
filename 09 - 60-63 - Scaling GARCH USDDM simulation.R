@@ -124,7 +124,7 @@ tau.mb <- q/2 - 1
 tau.obs <- c(-0.71599535, -0.45015292,  0.04493628,  0.49617300,  1.28476661)
 #tau.teo <- c(-0.72508420, -0.45902868,  0.04650156,  0.51659071,  1.35044577)
 
-# Figura 9, Calvet & Fisher 2002, pdf pg 18 ou artigo pg 398
+# Figura 9, Calvet & Fisher 2002, artigo pg 398
 # Linhas pontilhadas: escala para o Mov Browniano Simples.
 # Linhas tracejadas: escala com o MMAR e valor previsto com os dados originais (6119 dias, janela 1:180)
 
