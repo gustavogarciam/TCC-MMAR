@@ -241,11 +241,9 @@ q <- c(0, 0.01, 0.05,
        seq(2.3, 5, 0.1),
        6:10,
        seq(12.5, 20, 2.5))
-tauq <- tau(q,X.theta,dt)
+tauq <- tau(q,theta,dt)
 
 # Replicating Figure 10
-regfit <- data.frame(q = q, tauadj = predict(reg_tau))
-
 gTau <- ggplot(data=tauq,
        aes(x=q, y=tau_q)) +
   geom_abline(intercept = -1, slope = 0.5, linetype = "dotted")+
@@ -255,7 +253,6 @@ gTau <- ggplot(data=tauq,
   theme_bw()+
   ylab(TeX(r'($\tau_{\theta} (q)$)'))+
   xlab(TeX(r'($q$)'))+
-  ggtitle("Função de escala - Tempo de transação estocástico")#+
-#geom_line(color='red',data = regfit, aes(x=q, y=tauadj))
+  ggtitle("Função de escala - Tempo de transação estocástico")
 
 grid.arrange(gSq, gTau, nrow=2)
