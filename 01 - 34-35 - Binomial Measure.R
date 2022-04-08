@@ -77,31 +77,6 @@ for (k in 2:R){
 f.r        <- 1/range
 y          <- mass*f.r
 
-
-# Graph until 4th iteration
-R <- 4
-range <- 1
-mass <- 1
-
-k     <- 1
-range <- 1/2
-
-set.seed(0)
-p <- 0.5
-(mass  <- rep(mass, each = 2)*binomShuffle(rbinom(1, 1, p)) ) 
-# Mass shared across intervals with 'range' length.
-# Modify rbinom's 'p' parameter for unequal mass spliting probability.
-
-for (k in 2:R){
-  range <- range/2
-  len.m <- length(mass)
-  mass <- rep(mass, each = 2)*binomShuffle(rbinom(len.m, 1, p))
-  # print(sum(mass)) # sanity check, uncomment to see that mass is conserved
-}
-
-f.r        <- 1/range
-y          <- mass*f.r
-
 theta <- cumsum(y)/sum(y)
 plot(theta)
 t <- 1:16/16
@@ -115,28 +90,6 @@ gk4 <- ggplot(data=plotdf,
   ylab("Densidade")+
   xlab(TeX(r'($t$)'))+
   ggtitle("Medida binomial - 4 iterações")
-
-
-k     <- 1
-range <- 1/2
-
-set.seed(0)
-p <- 0.5
-(mass  <- rep(mass, each = 2)*binomShuffle(rbinom(1, 1, p)) ) 
-# Mass shared across intervals with 'range' length.
-# Modify rbinom's 'p' parameter for unequal mass spliting probability.
-
-R <- 4 # Number of iterations
-
-for (k in 2:R){
-  range <- range/2
-  len.m <- length(mass)
-  mass <- rep(mass, each = 2)*binomShuffle(rbinom(len.m, 1, p))
-  # print(sum(mass)) # sanity check, uncomment to see that mass is conserved
-}
-
-f.r        <- 1/range
-y          <- mass*f.r
 
 
 # Graph until 10th iteration
