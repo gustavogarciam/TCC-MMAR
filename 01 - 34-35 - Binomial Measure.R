@@ -170,13 +170,11 @@ double Sq(NumericVector X, double q, int dt) {
 
 ')
 
-X.theta <- log(theta) - log(theta[1]) # In the MMAR, X(t) = log(P(t)/P(0))
-
 for(qi in q){
   fpart <- NULL
   i <- 1
   for(t in dt){
-    fpart[i] <- Sq(X.theta, qi, t)
+    fpart[i] <- Sq(theta, qi, t)
     i <- i+1
   }
   dados <- cbind(dados, fpart)
